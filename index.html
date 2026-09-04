@@ -18,7 +18,7 @@
       href="https://fonts.gstatic.com"
       crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700;800&family=Allura&display=swap"
       rel="stylesheet">
 
 
@@ -231,7 +231,7 @@ body{
 
     border:
         1px solid
-        rgba(114,28,40,.45);
+        rgba(66,102,64,.38);
 
     background:
         rgba(255,255,255,.82);
@@ -264,75 +264,45 @@ body{
 
 }
 
-.music-symbol{
+ .music-symbol{
 
-    position:relative;
+    width:28px;
 
-    width:22px;
+    height:28px;
 
-    height:25px;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--green);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:27px;
+
+    line-height:1;
+
+    transform:translateY(-1px);
 
 }
 
 .music-symbol::before{
 
-    content:"";
+    content:"♫";
 
-    position:absolute;
+    display:block;
 
-    top:2px;
+    color:var(--green);
 
-    right:4px;
-
-    width:2px;
-
-    height:17px;
-
-    background:var(--bordo);
-
-    border-radius:2px;
-
-}
-
-.music-symbol::after{
-
-    content:"";
-
-    position:absolute;
-
-    right:-1px;
-
-    bottom:2px;
-
-    width:10px;
-
-    height:7px;
-
-    border-radius:50%;
-
-    background:var(--bordo);
-
-    transform:rotate(-15deg);
+    text-shadow:0 1px 2px rgba(66,102,64,.18);
 
 }
 
 .music-line{
 
-    position:absolute;
-
-    left:3px;
-
-    top:4px;
-
-    width:12px;
-
-    height:2px;
-
-    background:var(--bordo);
-
-    transform:rotate(-7deg);
-
-    border-radius:2px;
+    display:none;
 
 }
 
@@ -534,15 +504,11 @@ section{
     direction:ltr;
 
     font-family:
-        "Aref Ruqaa",
-        serif;
+        "Brittany Signature","Allura",cursive;
+     font-size:clamp(50px,8.5vw,72px);
+     font-weight:400;
 
-    font-size:
-        clamp(34px,6vw,48px);
-
-    font-weight:400;
-
-    letter-spacing:1px;
+    letter-spacing:-1.5px;
 
     color:#000;
 
@@ -642,12 +608,10 @@ section{
 .ar-title{
 
     font-family:
-        "Aref Ruqaa",
-        serif;
-
-    font-size:28px;
-
-    color:var(--black);
+        "Amiri", serif;
+     font-size:36px;
+     font-weight:700;
+     color:var(--green);
 
     margin-bottom:5px;
 
@@ -1388,12 +1352,10 @@ section{
     direction:ltr;
 
     font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size:58px;
-
-    color:var(--bordo);
+        "Brittany Signature","Allura",cursive;
+     font-size:76px;
+     font-weight:400;
+     color:var(--green);
 
     letter-spacing:4px;
 
@@ -1476,9 +1438,9 @@ section{
 
     .names{
 
-        font-size:38px;
+        font-size:50px;
 
-        letter-spacing:2px;
+        letter-spacing:-1.5px;
 
     }
 
@@ -1622,7 +1584,7 @@ section{
 
     .footer-names{
 
-        font-size:45px;
+        font-size:58px;
 
     }
 
@@ -1702,11 +1664,7 @@ section{
     id="musicButton"
     aria-label="Musique">
 
-    <div class="music-symbol">
-
-        <div class="music-line"></div>
-
-    </div>
+    <div class="music-symbol" aria-hidden="true"></div>
 
 </button>
 
