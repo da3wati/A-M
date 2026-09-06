@@ -32,6 +32,8 @@
 
     --black:#161616;
 
+    --emerald:#008f6b;
+
     --bordo:#721c28;
 
     --green:#426640;
@@ -510,7 +512,7 @@ section{
 
     letter-spacing:-1.5px;
 
-    color:#000;
+    color:var(--emerald);
 
     line-height:1.35;
 
@@ -547,7 +549,7 @@ section{
     font-family:"Aref Ruqaa",serif;
     font-size:24px;
     font-weight:700;
-    color:var(--bordo);
+    color:var(--black);
     line-height:1.35;
 }
 
@@ -733,7 +735,7 @@ section{
 
     line-height:.8;
 
-    color:var(--bordo);
+    color:var(--emerald);
 
 }
 
@@ -780,6 +782,11 @@ section{
 
 }
 
+.program-title{
+    font-size:34px;
+    color:var(--green);
+}
+
 .section-title-fr{
 
     direction:ltr;
@@ -804,43 +811,33 @@ section{
 /* =====================================================
    COUNTDOWN
 ===================================================== */
+    .countdown{
+        width:min(700px,100%);
+        margin:45px auto 0;
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+        direction:ltr;
+        overflow:hidden;
+        border-radius:22px;
+    }
 
-.countdown{
+    .count-box{
+        padding:25px 5px;
+        text-align:center;
+        direction:ltr;
+        border-left:1px solid rgba(0,0,0,.10);
+    }
 
-    width:min(700px,100%);
+    /* Viewer-facing order: DAYS | HOURS | MINUTES | SECONDS */
+    .count-box:nth-child(1){grid-column:1;grid-row:1;}
+    .count-box:nth-child(2){grid-column:2;grid-row:1;}
+    .count-box:nth-child(3){grid-column:3;grid-row:1;}
+    .count-box:nth-child(4){grid-column:4;grid-row:1;}
 
-    margin:45px auto 0;
+    .count-box:last-child{
+        border-left:0;
+    }
 
-    display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    overflow:hidden;
-
-    border-radius:22px;
-
-}
-
-.count-box{
-
-    padding:25px 5px;
-
-    text-align:center;
-
-    direction:ltr;
-
-    border-left:
-        1px solid
-        rgba(0,0,0,.10);
-
-}
-
-.count-box:last-child{
-
-    border-left:0;
-
-}
 
 .count-number{
 
@@ -1002,7 +999,7 @@ section{
 
     font-size:35px;
 
-    color:var(--bordo);
+    color:var(--emerald);
 
     margin-bottom:4px;
 
@@ -1127,7 +1124,7 @@ section{
 
     border-radius:40px;
 
-    background:var(--bordo);
+    background:var(--emerald);
 
     color:white;
 
@@ -1215,7 +1212,7 @@ section{
 
     border:
         1px solid
-        rgba(114,28,40,.30);
+        rgba(0,143,107,.30);
 
     box-shadow:
         0 10px 30px
@@ -1737,11 +1734,6 @@ section{
 
 </div>
 
-<div class="fr-title">
-
-    Invitation au mariage
-
-</div>
 
 
 <div class="invitation-text">
@@ -1760,17 +1752,6 @@ section{
 </div>
 
 
-<div class="invitation-text-fr">
-
-    C’est avec beaucoup de joie et d’affection
-    <br>
-    que nous sommes heureux de partager avec vous
-    <br>
-    ce jour si précieux
-    <br>
-    et de vous compter parmi nous.
-
-</div>
 
 
 <!-- DATE -->
@@ -1942,7 +1923,7 @@ section{
 </div>
 
 
-<div class="section-title-ar">
+<div class="section-title-ar program-title">
 
     برنامج الحفل
 
@@ -2248,27 +2229,27 @@ section{
                         fill="none"
                         stroke="currentColor"
                         stroke-width="4"
-                        style="color:#721c28"/>
+                        style="color:#161616"/>
 
                 <circle cx="50" cy="35" r="9"
                         fill="none"
                         stroke="currentColor"
                         stroke-width="4"
-                        style="color:#721c28"/>
+                        style="color:#161616"/>
 
                 <path d="M34 67c0-11 7-18 16-18s16 7 16 18"
                       fill="none"
                       stroke="currentColor"
                       stroke-width="4"
                       stroke-linecap="round"
-                      style="color:#721c28"/>
+                      style="color:#161616"/>
 
                 <path d="M22 22L78 78"
                       fill="none"
                       stroke="currentColor"
                       stroke-width="7"
                       stroke-linecap="round"
-                      style="color:#721c28"/>
+                      style="color:#161616"/>
 
             </svg>
 
@@ -2558,7 +2539,7 @@ new QRCode(
 
         height:150,
 
-        colorDark:"#721c28",
+        colorDark:"#008f6b",
 
         colorLight:"#ffffff",
 
